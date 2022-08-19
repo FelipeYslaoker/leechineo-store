@@ -306,7 +306,6 @@ async function getData (Vue) {
       Vue.product = { ...response.data.product, rating: 4.3 }
       Vue.$store.commit('products/addProduct', Vue.product)
     } catch (e) {
-      console.log(Vue.$nuxt)
       Vue.$nuxt.error({ statusCode: e.response?.status || 500 })
     }
   }
