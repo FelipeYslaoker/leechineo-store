@@ -98,7 +98,6 @@ export default {
       this.loading = false
     } catch (e) {
       this.loading = false
-      console.log(e)
     }
   }
 }
