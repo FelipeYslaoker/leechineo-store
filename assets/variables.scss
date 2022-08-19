@@ -1,0 +1,9 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+$dialog-elevation: 0;
+.theme--light.v-text-field--solo-inverted.v-input--is-focused > .v-input__control > .v-input__slot input {
+    color: black;
+}
+$select-dense-selections-margin: 0px !default;

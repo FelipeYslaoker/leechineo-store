@@ -1,0 +1,80 @@
+@media (max-width: 960px) {
+    .desktop-item {
+        display: none !important;
+    }
+}
+@media (min-width: 961px) {
+    .mobile-item {
+        display: none !important;
+    }
+}
+.cursor {
+    &-pointer {
+        cursor: pointer;
+    }
+}
+.position {
+    &-absolute {
+        position: absolute;
+    }
+}
+.overflow {
+    &-y {
+        &-scroll {
+            overflow-y: scroll;
+        }
+    }
+}
+
+@for $i from 50 through 1 {
+    .z-index {
+        &-#{$i} {
+            z-index: #{$i};
+        }
+    }
+}
+
+@for $i from 50 through 1 {
+    .font {
+        &-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}
+@for $i from 100 through 1 {
+    .opacity {
+        &-#{$i} {
+            opacity: #{$i/100};
+        }
+    }
+}
+@for $i from 10 through 1 {
+    .blur {
+        &-#{$i} {
+            backdrop-filter: blur(#{$i}px);
+            transition: backdrop-filter .15s;
+        }
+    }
+}
+.not-uppercase {
+    text-transform: none !important;
+}
+.background-transition {
+    transition: background-color .3s;
+}
+
+.text-color-transition {
+    transition: color .2s;
+}
+.unselectable {
+    user-select: none;
+}
+.show-element {
+    opacity: 1;
+    transition: opacity .15s;
+}
+.hide-element {
+    opacity: 0;
+    display: none !important;
+    transition: opacity .15s;
+}
