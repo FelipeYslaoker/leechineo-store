@@ -1,5 +1,5 @@
 import Vue from 'vue'
 
 Vue.filter('toBRL', (value) => {
-  return value.toLocaleString('pt-br', { minimumFractionDigits: 2 })
+  return value.toLocaleString('pt-br', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 })
