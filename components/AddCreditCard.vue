@@ -35,14 +35,27 @@
                 dense
                 label="Titular do cartão"
               />
-              <v-text-field
-                v-model="creditCard.dueDate"
-                v-mask="'##/##'"
-                outlined
-                dense
-                label="Validade"
-                placeholder="05/25"
-              />
+              <v-row>
+                <v-col cols="6">
+                  <v-text-field
+                    v-model="creditCard.dueDate"
+                    v-mask="'##/##'"
+                    outlined
+                    dense
+                    label="Validade"
+                    placeholder="05/25"
+                  />
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field
+                    v-model="creditCard.securityCode"
+                    outlined
+                    dense
+                    label="Código de segurança"
+                    placeholder="234"
+                  />
+                </v-col>
+              </v-row>
               <v-row dense>
                 <v-col cols="6">
                   <v-btn color="primary" class="not-uppercase" block :disabled="disableStepButton" @click="addCreditCard">
@@ -224,7 +237,8 @@ export default {
             number: this.creditCard.number,
             expireMonth: this.creditCard.dueDate.split('/')[0],
             expireYear: this.creditCard.dueDate.split('/')[1],
-            holderName: this.creditCard.holder
+            holderName: this.creditCard.holder,
+            securityCode: this.creditCard.securityCode
           },
           name: this.creditCard.name
         })
