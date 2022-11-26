@@ -20,5 +20,8 @@ export const mutations = {
 export const getters = {
   totalPrice (state) {
     return state.items.map(item => item.price.final * item.quantity || item.price.base * item.quantity).reduce((previous, current) => current + previous, 0)
+  },
+  basePrice (state) {
+    return state.items.map(item => item.price.base * item.quantity).reduce((previous, current) => current + previous, 0)
   }
 }
