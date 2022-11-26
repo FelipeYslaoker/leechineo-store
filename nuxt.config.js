@@ -43,8 +43,16 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    'nuxt-socket-io'
   ],
+  io: {
+    // module options
+    sockets: [{
+      name: 'main',
+      url: process.env.API_URL
+    }]
+  },
   auth: {
     strategies: {
       local: {
