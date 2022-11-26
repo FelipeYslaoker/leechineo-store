@@ -2,6 +2,10 @@
   "name": "leechineo-frontend",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0 <17.0.0",
+    "npm": ">=8.0.0 <9.0.0"
+  },
   "scripts": {
     "dev": "npm run lint && nuxt",
     "build": "npm run lint && nuxt build",
@@ -20,6 +24,7 @@
     "cryptr": "^6.0.3",
     "dotenv": "^10.0.0",
     "nuxt": "^2.15.7",
+    "nuxt-socket-io": "^2.0.3",
     "v-mask": "^2.3.0",
     "vue-clipboard2": "^0.3.3",
     "vuetify": "^2.5.5"
